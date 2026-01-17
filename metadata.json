@@ -1,0 +1,7 @@
+{
+  "name": "Alexandre Otni - Master Barber",
+  "description": "Institutional portfolio for Alexandre Otni Master Barber.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
