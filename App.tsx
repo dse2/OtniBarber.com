@@ -120,7 +120,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
+      {/* Gallery Section - Perfect Grid Organization */}
       <section id="galeria" className="py-24 bg-[#1a0f0a] text-white">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-end mb-16">
@@ -128,14 +128,37 @@ const App: React.FC = () => {
               Portfólio <br />
               <span className="text-[#c5a059]">Real</span>
             </h2>
-            <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20 hidden md:block">Trabalho de Campo</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20 hidden md:block">Galeria de Elite</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-4">
-            {ALL_GALLERY_IMAGES.map((img, i) => (
-              <div key={i} className="aspect-[3/4] rounded-2xl overflow-hidden bg-black group border-2 border-[#2c1810]">
-                <img src={img} alt="Trabalho Otni Barber" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" />
-              </div>
-            ))}
+          
+          {/* 
+            Desktop: 4 columns, 2 rows. 
+            Mobile: 2 columns, 4 rows.
+            Total slots: 8. 
+            Photos: 7 (1 tall photo occupies 2 slots).
+          */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[220px] md:auto-rows-[280px]">
+            {ALL_GALLERY_IMAGES.map((img, i) => {
+              const isFirst = i === 0;
+              return (
+                <div 
+                  key={i} 
+                  className={`
+                    relative overflow-hidden rounded-[2rem] bg-black group border border-[#c5a059]/10
+                    ${isFirst ? 'row-span-2 col-span-1' : 'col-span-1 row-span-1'}
+                  `}
+                >
+                  <img 
+                    src={img} 
+                    alt={`Trabalho Otni Barber ${i + 1}`} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                    <span className="text-[9px] font-black uppercase tracking-[0.3em] text-[#c5a059]">Obra de Arte</span>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -157,7 +180,7 @@ const App: React.FC = () => {
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-[#c5a059] transition-colors">WhatsApp</a>
           </div>
           <div className="text-[10px] text-[#2c1810]/30 font-bold uppercase tracking-[0.5em] text-center mt-8">
-            © 2024 Alexandre Otni • Otni Barber <br /> BH e Região
+            © 2024 Alexandre Otni • Otni Barber <br /> BH / Vale do Jatobá
           </div>
         </div>
       </footer>
