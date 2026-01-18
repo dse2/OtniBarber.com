@@ -19,11 +19,13 @@ export const PROFILE = {
 };
 
 export const ALL_GALLERY_IMAGES = [
-  "https://i.postimg.cc/bNbhTLXC/nev.jpg",
-  "https://i.postimg.cc/VN2wgtVh/xrstdyf.jpg",
-  "https://i.postimg.cc/Fz4454mx/rfugub.jpg",
-  "https://i.postimg.cc/wMQd9Gjz/kkk.jpg",
-  "https://i.postimg.cc/zv592FSW/FOTDT.jpg"
+  "https://i.postimg.cc/3R2nbLhV/Whats-App-Image-2026-01-17-at-21-27-14-(1).jpg",
+  "https://i.postimg.cc/d3BnJLLR/Whats-App-Image-2026-01-17-at-21-27-14-(3).jpg",
+  "https://i.postimg.cc/brTLqssB/Whats-App-Image-2026-01-17-at-21-27-14-(4).jpg",
+  "https://i.postimg.cc/jqQMHkZ4/Whats-App-Image-2026-01-17-at-21-27-14.jpg",
+  "https://i.postimg.cc/8PpttB0Y/Whats-App-Image-2026-01-17-at-21-27-15.jpg",
+  "https://i.postimg.cc/CMHcG6mJ/Whats-App-Image-2026-01-17-at-21-27-15-(1).jpg",
+  "https://i.postimg.cc/sxywFpD9/Whats-App-Image-2026-01-17-at-21-27-14-(2).jpg"
 ];
 
 export const TEAM: Barber[] = [
