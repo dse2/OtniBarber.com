@@ -109,7 +109,7 @@ const App: React.FC = () => {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {SERVICES.map(s => (
-            <div key={s.id} className="group bg-white border border-[#2c1810]/5 p-8 rounded-[2.5rem] flex flex-col justify-between hover:shadow-2xl transition-all hover:border-[#c5a059]/30">
+            <div key={s.id} className="group bg-white border border-[#2c1810]/5 p-8 rounded-[2.5rem] flex flex-col justify-between hover:shadow-2xl transition-all hover:border-[#2c1810]">
               <div className="space-y-1 mb-4">
                 <h3 className="text-lg font-black uppercase tracking-tight text-[#2c1810]">{s.name}</h3>
                 <p className="text-[10px] text-[#2c1810]/40 font-bold uppercase">{s.time} • Atendimento VIP</p>
