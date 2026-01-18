@@ -129,7 +129,7 @@ const App: React.FC = () => {
               <span className="text-[#c5a059]">Real</span>
             </h2>
             <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20 hidden md:block text-right">
-              Excelência Técnica <br /> BH / Vale do Jatobá
+              Excelência Técnica <br /> BH e Região
             </p>
           </div>
           
