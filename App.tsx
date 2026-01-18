@@ -120,32 +120,33 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Gallery Section - Perfect Grid Organization */}
+      {/* Gallery Section - Perfectly Optimized Layout */}
       <section id="galeria" className="py-24 bg-[#1a0f0a] text-white">
         <div className="container mx-auto px-6">
-          <div className="flex justify-between items-end mb-16">
+          <div className="flex justify-between items-end mb-12">
             <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-none">
               Portfólio <br />
               <span className="text-[#c5a059]">Real</span>
             </h2>
-            <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20 hidden md:block">Galeria de Elite</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20 hidden md:block text-right">
+              Excelência Técnica <br /> BH / Vale do Jatobá
+            </p>
           </div>
           
           {/* 
-            Desktop: 4 columns, 2 rows. 
-            Mobile: 2 columns, 4 rows.
-            Total slots: 8. 
-            Photos: 7 (1 tall photo occupies 2 slots).
+            Grid de 4 colunas e 2 linhas (Desktop)
+            Grid de 2 colunas e 4 linhas (Mobile)
           */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[220px] md:auto-rows-[280px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[250px]">
             {ALL_GALLERY_IMAGES.map((img, i) => {
-              const isFirst = i === 0;
+              // A primeira foto (i=0) é a "foto alta" (row-span-2)
+              const isTall = i === 0;
               return (
                 <div 
                   key={i} 
                   className={`
                     relative overflow-hidden rounded-[2rem] bg-black group border border-[#c5a059]/10
-                    ${isFirst ? 'row-span-2 col-span-1' : 'col-span-1 row-span-1'}
+                    ${isTall ? 'row-span-2 col-span-1' : 'col-span-1 row-span-1'}
                   `}
                 >
                   <img 
@@ -154,7 +155,7 @@ const App: React.FC = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                    <span className="text-[9px] font-black uppercase tracking-[0.3em] text-[#c5a059]">Obra de Arte</span>
+                    <span className="text-[9px] font-black uppercase tracking-[0.3em] text-[#c5a059]">Visagismo Elite</span>
                   </div>
                 </div>
               );
