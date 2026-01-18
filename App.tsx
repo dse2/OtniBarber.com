@@ -157,7 +157,7 @@ const App: React.FC = () => {
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-[#c5a059] transition-colors">WhatsApp</a>
           </div>
           <div className="text-[10px] text-[#2c1810]/30 font-bold uppercase tracking-[0.5em] text-center mt-8">
-            © 2024 Alexandre Otni • Otni Barber <br /> BH / Vale do Jatobá
+            © 2024 Alexandre Otni • Otni Barber <br /> BH e Região
           </div>
         </div>
       </footer>
